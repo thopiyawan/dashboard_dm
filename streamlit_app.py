@@ -586,7 +586,7 @@ st.sidebar.markdown("""
     """)
 
 st.sidebar.subheader("จำนวนผู้ใช้งาน")
-col1, col2, col3, col4 = st.sidebar.columns(2)
+col1, col2, col3, col4 = st.sidebar.columns(4)
 col2.metric("ชาย", str(round((numb_gender[2]/sum(numb_gender)*100)))+"%", "")
 col3.metric("หญิง", str(round((numb_gender[1]/sum(numb_gender)*100)))+"%", "")
 col4.metric("เชื่อมระบบแพทย์", str(round((len(df_doctorconnect_filter.index)/sum(numb_gender))*100))+"%", "")
