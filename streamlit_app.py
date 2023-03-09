@@ -143,18 +143,17 @@ with col1:
 
     # Pie Chart
     # plt.subplot(1, 3, 1)
-    # plt.subplot(3, 1, 1)
-    fig4 = plt.subplot()
+    plt.subplot(3, 1, 1)
     plt.pie(sizes, colors=colors,
                 autopct='%1.1f%%', pctdistance=0.85,
                 explode=explode)
 
     # draw circle
     centre_circle = plt.Circle((0, 0), 0.50, fc='white')
-    fig4 = plt.gcf()
+    fig = plt.gcf()
 
     # Adding Circle in Pie chart
-    fig4.gca().add_artist(centre_circle)
+    fig.gca().add_artist(centre_circle)
 
     # Adding Title of chart
     # plt.title('ภาพรวมของระดับน้ำตาล')
@@ -217,9 +216,7 @@ with col1:
 
     # Pie Chart
     # plt.subplot(1, 3, 2)
-    
-    # plt.subplot(3, 1, 2)
-    fig5 = plt.subplot()
+    plt.subplot(3, 1, 2)
     plt.pie(sizes, colors=colors,
                 autopct='%1.1f%%', pctdistance=0.85,
                 explode=explode)
@@ -231,13 +228,13 @@ with col1:
 
     # draw circle
     centre_circle = plt.Circle((0, 0), 0.50, fc='white')
-    fig5 = plt.gcf()
+    fig = plt.gcf()
 
     # Adding Circle in Pie chart
-    fig5.gca().add_artist(centre_circle)
+    fig.gca().add_artist(centre_circle)
 
     # Adding Title of chart
-    #plt.title('เฉลี่ยการฉีดอินซูลินต่อวัน')
+    # plt.title('เฉลี่ยการฉีดอินซูลินต่อวัน')
     plt.title(u'เฉลี่ยการฉีดอินซูลินต่อวัน',fontname='Tahoma',fontsize=9)
     # Daily insulin average
     kwargs = dict(size=7, color='white', va='center', fontweight='bold')
@@ -308,7 +305,7 @@ with col1:
 
     # Pie Chart
     # plt.subplot(1, 3, 3)
-    fig6 = plt.subplot()
+    plt.subplot(3, 1, 3)
     plt.pie(sizes, colors=colors,
                 autopct='%1.1f%%', pctdistance=0.85,
                 explode=explode)
@@ -319,24 +316,24 @@ with col1:
     # plt.text(0.4, 0.4, sum_dose_str , va = 'center', ha = 'center', backgroundcolor = 'white')
 
     # draw circle
-    centre_circle6 = plt.Circle((0, 0), 0.50, fc='white')
-    fig6 = plt.gcf()
+    centre_circle = plt.Circle((0, 0), 0.50, fc='white')
+    fig = plt.gcf()
 
     # Adding Circle in Pie chart
-    fig6.gca().add_artist(centre_circle6)
+    fig.gca().add_artist(centre_circle)
 
     # Adding Title of chart
     # b = a.encode("cp874")
     # c = b.decode("cp874")
     # st.write("เฉลี่ยการทานอาหารต่อวัน")
-    plt.title(label='เฉลี่ยการทานอาหารต่อวัน',fontname='Tahoma',fontsize=9)
+    plt.title(u'เฉลี่ยการทานอาหารต่อวัน',fontname='Tahoma',fontsize=9)
     # plt.title(a)
     # Daily meal average
 
-    kwargs6 = dict(size=7, color='white', va='center', fontweight='bold')
+    kwargs = dict(size=7, color='white', va='center', fontweight='bold')
     plt.text(0, 0, carb_sum, ha='center',
                 bbox=dict(boxstyle='round', edgecolor='none'),
-                **kwargs6)
+                **kwargs)
 
     # plt.text(0, 0, sum_dose_str, ha='center',
     #         bbox=dict(boxstyle='round', facecolor='#9772FB', edgecolor='none'),
@@ -353,7 +350,7 @@ with col1:
     # st.pyplot(fig)
     # plt.plot()
 
-    container.pyplot(fig6)
+    container.pyplot(fig)
 
 
 with col2:
@@ -634,3 +631,7 @@ st.sidebar.pyplot(fig3)
 # st.sidebar.write('#mood_Active:',pp5)
 # st.sidebar.write('#ketone_Active:',pp6)
 # st.sidebar.write('#exercise_Active:',pp7)
+
+
+
+
