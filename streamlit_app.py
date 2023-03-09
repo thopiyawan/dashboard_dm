@@ -348,9 +348,11 @@ with col1:
     
     # st.pyplot(fig)
     # plt.plot()
- 
-    container.pyplot(st.write("ภาพรวมของระดับน้ำตาล"),fig4)
+    st.write("ภาพรวมของระดับน้ำตาล")
+    container.pyplot(fig4)
+    st.write("เฉลี่ยการฉีดอินซูลินต่อวัน")
     container.pyplot(fig5)
+    st.write("เฉลี่ยการทานอาหารต่อวัน")
     container.pyplot(fig6)
 
 
