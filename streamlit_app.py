@@ -329,7 +329,7 @@ with col1:
     # b = a.encode("cp874")
     # c = b.decode("cp874")
     # st.write("เฉลี่ยการทานอาหารต่อวัน")
-    plt.title(u'เฉลี่ยการทานอาหารต่อวัน',fontname='Tahoma',fontsize=9)
+    plt.title(label='เฉลี่ยการทานอาหารต่อวัน',fontname='Tahoma',fontsize=9)
     # plt.title(a)
     # Daily meal average
 
