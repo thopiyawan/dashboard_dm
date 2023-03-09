@@ -320,10 +320,10 @@ with col1:
 
     # draw circle
     centre_circle = plt.Circle((0, 0), 0.50, fc='white')
-    fig6 = plt.gcf()
+    plt.gcf()
 
     # Adding Circle in Pie chart
-    fig6.gca().add_artist(centre_circle)
+    ax6.gca().add_artist(centre_circle)
 
     # Adding Title of chart
     # b = a.encode("cp874")
