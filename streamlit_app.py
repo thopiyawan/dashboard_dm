@@ -148,7 +148,7 @@ with col1:
 
     # draw circle
     centre_circle = plt.Circle((0, 0), 0.50, fc='white')
-    fig = plt.gcf()
+    fig = ax4.plt.gcf()
 
     # Adding Circle in Pie chart
     fig.gca().add_artist(centre_circle)
