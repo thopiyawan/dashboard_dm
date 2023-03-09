@@ -577,7 +577,7 @@ st.markdown(style, unsafe_allow_html=True)
 
 # st.sidebar.markdown("## **ภาพรวม DMTHAIDIARY**")
 # st.sidebar.write("จำนวนผู้ใช้งานที่ลงทะเบียน:",str(len(df_profile_filter.index)))
-st.sidebar.markdown("""## ภาพรวม DMTHAIDIARY""")
+st.sidebar.markdown("""ภาพรวม DMTHAIDIARY""")
 
 st.sidebar.subheader("จำนวนผู้ใช้งาน")
 col1, col2, col3, col4 = st.sidebar.columns(4)
