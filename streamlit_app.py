@@ -308,8 +308,8 @@ with col1:
 
     # Pie Chart
     # plt.subplot(1, 3, 3)
-    fig6 = plt.subplot()
-    plt.pie(sizes, colors=colors,
+    fig6, ax6 = plt.subplot()
+    ax6.pie(sizes, colors=colors,
                 autopct='%1.1f%%', pctdistance=0.85,
                 explode=explode)
 
@@ -319,11 +319,11 @@ with col1:
     # plt.text(0.4, 0.4, sum_dose_str , va = 'center', ha = 'center', backgroundcolor = 'white')
 
     # draw circle
-    centre_circle = plt.Circle((0, 0), 0.50, fc='white')
+    centre_circle6 = plt.Circle((0, 0), 0.50, fc='white')
     fig6 = plt.gcf()
 
     # Adding Circle in Pie chart
-    fig6.gca().add_artist(centre_circle)
+    fig6.gca().add_artist(centre_circle6)
 
     # Adding Title of chart
     # b = a.encode("cp874")
