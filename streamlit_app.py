@@ -587,10 +587,10 @@ st.sidebar.markdown("""
 
 st.sidebar.subheader("จำนวนผู้ใช้งาน")
 col1, col2, col3, col4 = st.sidebar.columns(4)
-col2.metric("ชาย", str(len(df_profile_filter.index))+"%", "คน")
-col3.metric("หญิง", str(round((numb_gender[1]/sum(numb_gender)*100)))+"%", "คน")
-col4.metric("การใช้งานเชื่อมระบบแพทย์", str(round((len(df_doctorconnect_filter.index)/sum(numb_gender))*100))+"%", "")
-col1.metric("จำนวนผู้ใช้งานที่ลงทะเบียน",  str(len(df_profile_filter.index))+"%", "ทั้งหมด")
+col2.metric("ชาย", str(len(df_profile_filter.index))+"%", "")
+col3.metric("หญิง", str(round((numb_gender[1]/sum(numb_gender)*100)))+"%", "")
+col4.metric("เชื่อมระบบแพทย์", str(round((len(df_doctorconnect_filter.index)/sum(numb_gender))*100))+"%", "")
+col1.metric("ผู้ที่ลงทะเบียน",  str(len(df_profile_filter.index))+"%", "")
 
 st.sidebar.pyplot(fig2)
 st.sidebar.pyplot(fig1)
