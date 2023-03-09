@@ -157,7 +157,7 @@ with col1:
 
     # Adding Title of chart
     # plt.title('ภาพรวมของระดับน้ำตาล')
-    # plt.title(u'ภาพรวมของระดับน้ำตาล',fontname='Tahoma',fontsize=9)
+    plt.title(u'ภาพรวมของระดับน้ำตาล',fontname='Tahoma',fontsize=9)
     # Glucose overview
     # Add Legends
     # plt.legend(labels, loc='upper center', bbox_to_anchor=(0.5, -0.05))
@@ -236,7 +236,7 @@ with col1:
 
     # Adding Title of chart
     #plt.title('เฉลี่ยการฉีดอินซูลินต่อวัน')
-    # plt.title(u'เฉลี่ยการฉีดอินซูลินต่อวัน',fontname='Tahoma',fontsize=9)
+    plt.title(u'เฉลี่ยการฉีดอินซูลินต่อวัน',fontname='Tahoma',fontsize=9)
     # Daily insulin average
     kwargs = dict(size=7, color='white', va='center', fontweight='bold')
     plt.text(0, 0, sum_dose_str, ha='center',
@@ -307,7 +307,9 @@ with col1:
     # Pie Chart
     # plt.subplot(1, 3, 3)
     plt.subplot(3, 1, 3)
-    plt.pie(sizes, colors=colors,
+    fig6, ax6 = plt.subplots()
+
+    ax6.plot.pie(sizes, colors=colors,
                 autopct='%1.1f%%', pctdistance=0.85,
                 explode=explode)
 
@@ -318,16 +320,16 @@ with col1:
 
     # draw circle
     centre_circle = plt.Circle((0, 0), 0.50, fc='white')
-    fig = plt.gcf()
+    fig6 = plt.gcf()
 
     # Adding Circle in Pie chart
-    fig.gca().add_artist(centre_circle)
+    fig6.gca().add_artist(centre_circle)
 
     # Adding Title of chart
     # b = a.encode("cp874")
     # c = b.decode("cp874")
     # st.write("เฉลี่ยการทานอาหารต่อวัน")
-    # plt.title(u'เฉลี่ยการทานอาหารต่อวัน',fontname='Tahoma',fontsize=9)
+    plt.title(u'เฉลี่ยการทานอาหารต่อวัน',fontname='Tahoma',fontsize=9)
     # plt.title(a)
     # Daily meal average
 
@@ -351,7 +353,7 @@ with col1:
     # st.pyplot(fig)
     # plt.plot()
 
-    container.pyplot(fig)
+    container.pyplot(fig6)
 
 
 with col2:
