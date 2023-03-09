@@ -584,7 +584,7 @@ col1, col2, col3, col4 = st.sidebar.columns(4)
 col2.metric("ชาย", str(round((numb_gender[2]/sum(numb_gender)*100)))+"%", "")
 col3.metric("หญิง", str(round((numb_gender[1]/sum(numb_gender)*100)))+"%", "")
 col4.metric("เชื่อมระบบแพทย์", str(round((len(df_doctorconnect_filter.index)/sum(numb_gender))*100))+"%", "")
-col1.metric("ผู้ที่ลงทะเบียน",  str(len(df_profile_filter.index))+" คน", "")
+col1.metric("ผู้ที่ลงทะเบียน(คน)",  str(len(df_profile_filter.index)), "")
 
 st.sidebar.pyplot(fig2)
 st.sidebar.pyplot(fig1)
