@@ -105,7 +105,7 @@ with col1:
     """##### **รายบุคคล**"""
     container = st.container()
       # col1, col2, col3 = st.columns(3)
-
+    
     #Left Column
     # with col1:
     #ต่อdataframe glucose_level กับ finger_stick
@@ -118,9 +118,6 @@ with col1:
 
     #คิดเปอร์เซ็นของแต่ละ group
     percentage_lavel_glu = glu_level.lavel.value_counts(normalize=True).mul(100).round(1).astype(str) + '%'
-
-
-        
 
     # Setting size in Chart based on
     # given values
@@ -143,8 +140,9 @@ with col1:
 
     # Pie Chart
     # plt.subplot(1, 3, 1)
-    plt.subplot(3, 1, 1)
-    plt.pie(sizes, colors=colors,
+    # plt.subplot(3, 1, 1)
+    fig4, ax4 = plt.subplots() 
+    ax4.pie(sizes, colors=colors,
                 autopct='%1.1f%%', pctdistance=0.85,
                 explode=explode)
 
@@ -157,11 +155,11 @@ with col1:
 
     # Adding Title of chart
     # plt.title('ภาพรวมของระดับน้ำตาล')
-    plt.title(u'ภาพรวมของระดับน้ำตาล',fontname='Tahoma',fontsize=9)
+    ax4.title(u'ภาพรวมของระดับน้ำตาล',fontname='Tahoma',fontsize=9)
     # Glucose overview
     # Add Legends
     # plt.legend(labels, loc='upper center', bbox_to_anchor=(0.5, -0.05))
-    plt.legend(labels,   loc="center left",bbox_to_anchor=(1, 0, 0.5, 1), title="Legends")
+    ax4.legend(labels,   loc="center left",bbox_to_anchor=(1, 0, 0.5, 1), title="Legends")
 
     # Displaying Chart
     # plt.show()
@@ -216,8 +214,9 @@ with col1:
 
     # Pie Chart
     # plt.subplot(1, 3, 2)
-    plt.subplot(3, 1, 2)
-    plt.pie(sizes, colors=colors,
+    # plt.subplot(3, 1, 2)
+    fig5, ax5 = plt.subplots() 
+    ax5.pie(sizes, colors=colors,
                 autopct='%1.1f%%', pctdistance=0.85,
                 explode=explode)
 
@@ -235,10 +234,10 @@ with col1:
 
     # Adding Title of chart
     # plt.title('เฉลี่ยการฉีดอินซูลินต่อวัน')
-    plt.title(u'เฉลี่ยการฉีดอินซูลินต่อวัน',fontname='Tahoma',fontsize=9)
+    ax5.title(u'เฉลี่ยการฉีดอินซูลินต่อวัน',fontname='Tahoma',fontsize=9)
     # Daily insulin average
     kwargs = dict(size=7, color='white', va='center', fontweight='bold')
-    plt.text(0, 0, sum_dose_str, ha='center',
+    ax5.text(0, 0, sum_dose_str, ha='center',
                 bbox=dict(boxstyle='round', edgecolor='none'),
                 **kwargs)
 
@@ -247,7 +246,7 @@ with col1:
     #         **kwargs)
     # Add Legends
     # plt.legend(labels, loc='upper center', bbox_to_anchor=(0.5, -0.05))
-    plt.legend(labels,   loc="center left",bbox_to_anchor=(1, 0, 0.5, 1), title="Legends")
+    ax5.legend(labels,   loc="center left",bbox_to_anchor=(1, 0, 0.5, 1), title="Legends")
 
     # container.pyplot(fig)
 
@@ -305,8 +304,8 @@ with col1:
 
     # Pie Chart
     # plt.subplot(1, 3, 3)
-    plt.subplot(3, 1, 3)
-    plt.pie(sizes, colors=colors,
+    fig6, ax6 = plt.subplots() 
+    ax6.pie(sizes, colors=colors,
                 autopct='%1.1f%%', pctdistance=0.85,
                 explode=explode)
 
@@ -326,12 +325,12 @@ with col1:
     # b = a.encode("cp874")
     # c = b.decode("cp874")
     # st.write("เฉลี่ยการทานอาหารต่อวัน")
-    plt.title(u'เฉลี่ยการทานอาหารต่อวัน',fontname='Tahoma',fontsize=9)
+    ax6.title(u'เฉลี่ยการทานอาหารต่อวัน',fontname='Tahoma',fontsize=9)
     # plt.title(a)
     # Daily meal average
 
     kwargs = dict(size=7, color='white', va='center', fontweight='bold')
-    plt.text(0, 0, carb_sum, ha='center',
+    ax6.text(0, 0, carb_sum, ha='center',
                 bbox=dict(boxstyle='round', edgecolor='none'),
                 **kwargs)
 
@@ -340,7 +339,7 @@ with col1:
     #         **kwargs)
     # Add Legends
     # plt.legend(labels, loc='upper center', bbox_to_anchor=(0.5, -0.05))
-    plt.legend(labels,   loc="center left",bbox_to_anchor=(1, 0, 0.5, 1), title="Legends")
+    ax6.legend(labels,   loc="center left",bbox_to_anchor=(1, 0, 0.5, 1), title="Legends")
 
     # plt.legend(labels,   loc="upper center",bbox_to_anchor=(1, 0, 0.5, 1), title="Legends")
 
@@ -350,7 +349,7 @@ with col1:
     # st.pyplot(fig)
     # plt.plot()
 
-    container.pyplot(fig)
+    container.pyplot(fig6)
 
 
 with col2:
@@ -580,10 +579,6 @@ st.sidebar.markdown("""
     - จำนวนผู้ใช้งาน ชาย """+ str(round((numb_gender[2]/sum(numb_gender)*100))) + """% หญิง """+ str(round((numb_gender[1]/sum(numb_gender)*100)))+"""%""" """
     - จำนวนการใช้งานเชื่อมระบบแพทย์ """+ str(round((len(df_doctorconnect_filter.index)/sum(numb_gender))*100))+"""%""" """
     - จำนวนผู้ใช้าน Active (3 เดือนล่าสุด) """+str(len(pd.unique(mask['user_id'])))+""":"""+str(len(df_profile_filter.index))+"""
-
- 
-
-
     """)
 st.sidebar.subheader("จำนวนผู้ใช้งาน")
 st.sidebar.pyplot(fig2)
