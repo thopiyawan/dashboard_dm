@@ -306,10 +306,8 @@ with col1:
 
     # Pie Chart
     # plt.subplot(1, 3, 3)
-    plt.subplot(3, 1, 3)
-    fig6, ax6 = plt.subplots()
-
-    ax6.pie(sizes, colors=colors,
+    fig6 = plt.subplot(3, 1, 3)
+    plt.pie(sizes, colors=colors,
                 autopct='%1.1f%%', pctdistance=0.85,
                 explode=explode)
 
@@ -320,10 +318,10 @@ with col1:
 
     # draw circle
     centre_circle = plt.Circle((0, 0), 0.50, fc='white')
-    plt.gcf()
+    fig6 = plt.gcf()
 
     # Adding Circle in Pie chart
-    ax6.gca().add_artist(centre_circle)
+    fig6.gca().add_artist(centre_circle)
 
     # Adding Title of chart
     # b = a.encode("cp874")
