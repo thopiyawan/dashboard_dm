@@ -308,8 +308,8 @@ with col1:
 
     # Pie Chart
     # plt.subplot(1, 3, 3)
-    fig6, ax6 = plt.subplot()
-    ax6.pie(sizes, colors=colors,
+    fig6 = plt.subplot()
+    plt.pie(sizes, colors=colors,
                 autopct='%1.1f%%', pctdistance=0.85,
                 explode=explode)
 
@@ -333,10 +333,10 @@ with col1:
     # plt.title(a)
     # Daily meal average
 
-    kwargs = dict(size=7, color='white', va='center', fontweight='bold')
+    kwargs6 = dict(size=7, color='white', va='center', fontweight='bold')
     plt.text(0, 0, carb_sum, ha='center',
                 bbox=dict(boxstyle='round', edgecolor='none'),
-                **kwargs)
+                **kwargs6)
 
     # plt.text(0, 0, sum_dose_str, ha='center',
     #         bbox=dict(boxstyle='round', facecolor='#9772FB', edgecolor='none'),
