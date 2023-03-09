@@ -101,7 +101,6 @@ st.set_page_config(layout="wide")
 col1, col2 = st.columns(2)
 
 with col1:
-    st.markdown('<style>body  background-color: lightgoldenrodyellow; </style>',unsafe_allow_html=True)
     
     """##### **รายบุคคล**"""
 
@@ -124,11 +123,11 @@ with col1:
     # given values
     # sizes = [sum.value.Hypo, sum.value.Low, sum.value.normal, sum.value.High, sum.value.Hyper]
     sizes = [category_glu.value.Hypo, category_glu.value.Low, category_glu.value.normal, category_glu.value.High, category_glu.value.Hyper]
-    Hypo = "Hypo", category_glu.value.Hypo
-    Low = "Low", category_glu.value.Low
-    Normal = "Normal", category_glu.value.normal
-    High = "High", category_glu.value.High
-    Hyper = "Hyper", category_glu.value.Hyper
+    Hypo = "Hypo : "+ str(category_glu.value.Hypo)
+    Low = "Low : "+ str(category_glu.value.Low)
+    Normal = "Normal : "+ str(category_glu.value.normal)
+    High = "High : "+str(category_glu.value.High)
+    Hyper = "Hyper : "+str(category_glu.value.Hyper)
 
     # Setting labels for items in Chart
     labels = [Hypo, Low, Normal, High, Hyper]
