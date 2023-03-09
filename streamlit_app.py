@@ -98,10 +98,10 @@ lastest_glu['ts'] = pd.to_datetime(lastest_glu['ts'], format = '%d-%m-%Y %H:%M:%
 st.set_page_config(layout="wide")
 
 # Space out the maps so the first one is 2x the size of the other three
-col1, col2 = st.columns([2,1])
+col1, col2 = st.columns(2)
 
 with col1:
-    st.markdown('<style>body  background-color: lightgoldenrodyellow; </style>'.format, unsafe_allow_html=True)
+    st.markdown('<style>body  background-color: lightgoldenrodyellow; </style>',unsafe_allow_html=True)
     
     """##### **รายบุคคล**"""
 
