@@ -143,17 +143,18 @@ with col1:
 
     # Pie Chart
     # plt.subplot(1, 3, 1)
-    plt.subplot(3, 1, 1)
+    # plt.subplot(3, 1, 1)
+    fig4 = plt.subplot()
     plt.pie(sizes, colors=colors,
                 autopct='%1.1f%%', pctdistance=0.85,
                 explode=explode)
 
     # draw circle
     centre_circle = plt.Circle((0, 0), 0.50, fc='white')
-    fig = plt.gcf()
+    fig4 = plt.gcf()
 
     # Adding Circle in Pie chart
-    fig.gca().add_artist(centre_circle)
+    fig4.gca().add_artist(centre_circle)
 
     # Adding Title of chart
     # plt.title('ภาพรวมของระดับน้ำตาล')
@@ -217,7 +218,8 @@ with col1:
     # Pie Chart
     # plt.subplot(1, 3, 2)
     
-    plt.subplot(3, 1, 2)
+    # plt.subplot(3, 1, 2)
+    fig5 = plt.subplot()
     plt.pie(sizes, colors=colors,
                 autopct='%1.1f%%', pctdistance=0.85,
                 explode=explode)
@@ -229,10 +231,10 @@ with col1:
 
     # draw circle
     centre_circle = plt.Circle((0, 0), 0.50, fc='white')
-    fig = plt.gcf()
+    fig5 = plt.gcf()
 
     # Adding Circle in Pie chart
-    fig.gca().add_artist(centre_circle)
+    fig5.gca().add_artist(centre_circle)
 
     # Adding Title of chart
     #plt.title('เฉลี่ยการฉีดอินซูลินต่อวัน')
@@ -306,7 +308,7 @@ with col1:
 
     # Pie Chart
     # plt.subplot(1, 3, 3)
-    fig6 = plt.subplot(3, 1, 3)
+    fig6 = plt.subplot()
     plt.pie(sizes, colors=colors,
                 autopct='%1.1f%%', pctdistance=0.85,
                 explode=explode)
