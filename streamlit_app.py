@@ -577,13 +577,7 @@ st.markdown(style, unsafe_allow_html=True)
 
 # st.sidebar.markdown("## **ภาพรวม DMTHAIDIARY**")
 # st.sidebar.write("จำนวนผู้ใช้งานที่ลงทะเบียน:",str(len(df_profile_filter.index)))
-st.sidebar.markdown("""
-## ภาพรวม DMTHAIDIARY
-    - จำนวนผู้ใช้งานที่ลงทะเบียน """+ str(len(df_profile_filter.index)) + """
-    - จำนวนผู้ใช้งาน ชาย """+ str(round((numb_gender[2]/sum(numb_gender)*100))) + """% หญิง """+ str(round((numb_gender[1]/sum(numb_gender)*100)))+"""%""" """
-    - จำนวนการใช้งานเชื่อมระบบแพทย์ """+ str(round((len(df_doctorconnect_filter.index)/sum(numb_gender))*100))+"""%""" """
-    - จำนวนผู้ใช้าน Active (3 เดือนล่าสุด) """+str(len(pd.unique(mask['user_id'])))+""":"""+str(len(df_profile_filter.index))+"""
-    """)
+st.sidebar.markdown("""## ภาพรวม DMTHAIDIARY""")
 
 st.sidebar.subheader("จำนวนผู้ใช้งาน")
 col1, col2, col3, col4 = st.sidebar.columns(4)
@@ -595,6 +589,11 @@ col1.metric("ผู้ที่ลงทะเบียน",  str(len(df_profile
 st.sidebar.pyplot(fig2)
 st.sidebar.pyplot(fig1)
 st.sidebar.pyplot(fig3)
+
+# - จำนวนผู้ใช้งานที่ลงทะเบียน """+ str(len(df_profile_filter.index)) + """
+#     - จำนวนผู้ใช้งาน ชาย """+ str(round((numb_gender[2]/sum(numb_gender)*100))) + """% หญิง """+ str(round((numb_gender[1]/sum(numb_gender)*100)))+"""%""" """
+#     - จำนวนการใช้งานเชื่อมระบบแพทย์ """+ str(round((len(df_doctorconnect_filter.index)/sum(numb_gender))*100))+"""%""" """
+#     - จำนวนผู้ใช้าน Active (3 เดือนล่าสุด) """+str(len(pd.unique(mask['user_id'])))+""":"""+str(len(df_profile_filter.index))+"""
 
    # Active List: #max_gluc: """+ str(max_gluc.index) +"""
     # Active List: #min_gluc: """+ str(min_gluc.index) +""" 
