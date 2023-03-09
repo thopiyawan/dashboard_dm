@@ -631,22 +631,3 @@ st.sidebar.pyplot(fig3)
 # st.sidebar.write('#mood_Active:',pp5)
 # st.sidebar.write('#ketone_Active:',pp6)
 # st.sidebar.write('#exercise_Active:',pp7)
-
-
-# col1,col2,col3 = st.beta_columns(3)
-
-
-
-# with st.container():
-#     col1, col2 = st.columns(2)
-#     with col1:
-#         st.write('Caption for first chart')
-#     with col2:
-#         st.line_chart((0,1), height=100)
-# with st.container():
-#     col1, col2 = st.columns(2)
-#     with col1:
-#         st.write('Caption for second chart')
-#     with col2:
-#         st.line_chart((1,0), height=100)
-
