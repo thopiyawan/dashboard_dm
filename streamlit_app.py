@@ -234,8 +234,8 @@ with col1:
     fig.gca().add_artist(centre_circle)
 
     # Adding Title of chart
-    plt.title('เฉลี่ยการฉีดอินซูลินต่อวัน')
-    #plt.title(u'เฉลี่ยการฉีดอินซูลินต่อวัน',fontname='Tahoma',fontsize=9)
+    #plt.title('เฉลี่ยการฉีดอินซูลินต่อวัน')
+    plt.title('เฉลี่ยการฉีดอินซูลินต่อวัน',fontname='Tahoma',fontsize=9)
     # Daily insulin average
     kwargs = dict(size=7, color='white', va='center', fontweight='bold')
     plt.text(0, 0, sum_dose_str, ha='center',
