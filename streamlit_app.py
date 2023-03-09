@@ -348,7 +348,8 @@ with col1:
     
     # st.pyplot(fig)
     # plt.plot()
-    container.pyplot(fig4)
+ 
+    container.pyplot(st.write("ภาพรวมของระดับน้ำตาล"),fig4)
     container.pyplot(fig5)
     container.pyplot(fig6)
 
