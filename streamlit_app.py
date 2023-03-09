@@ -103,7 +103,7 @@ col1, col2 = st.columns(2)
 with col1:
     
     """##### **รายบุคคล**"""
-    container = st.container()
+
       # col1, col2, col3 = st.columns(3)
     
     #Left Column
@@ -349,11 +349,11 @@ with col1:
     # st.pyplot(fig)
     # plt.plot()
     st.write("ภาพรวมของระดับน้ำตาล")
-    container.pyplot(fig4)
+    st.pyplot(fig4)
     st.write("เฉลี่ยการฉีดอินซูลินต่อวัน")
-    container.pyplot(fig5)
+    st.pyplot(fig5)
     st.write("เฉลี่ยการทานอาหารต่อวัน")
-    container.pyplot(fig6)
+    st.pyplot(fig6)
 
 
 with col2:
