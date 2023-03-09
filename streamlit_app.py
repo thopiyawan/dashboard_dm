@@ -309,7 +309,7 @@ with col1:
     plt.subplot(3, 1, 3)
     fig6, ax6 = plt.subplots()
 
-    ax6.plot.pie(sizes, colors=colors,
+    ax6.pie(sizes, colors=colors,
                 autopct='%1.1f%%', pctdistance=0.85,
                 explode=explode)
 
