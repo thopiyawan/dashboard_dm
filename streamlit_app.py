@@ -236,7 +236,7 @@ with col1:
     # plt.title('เฉลี่ยการฉีดอินซูลินต่อวัน')
     # ax5.title(u'เฉลี่ยการฉีดอินซูลินต่อวัน',fontname='Tahoma',fontsize=9)
     # Daily insulin average
-    kwargs = dict(size=7, color='white', va='center', fontweight='bold')
+    kwargs = dict(size=10, color='white', va='center', fontweight='bold')
     ax5.text(0, 0, sum_dose_str, ha='center',
                 bbox=dict(boxstyle='round', edgecolor='none'),
                 **kwargs)
@@ -329,7 +329,7 @@ with col1:
     # plt.title(a)
     # Daily meal average
 
-    kwargs = dict(size=7, color='white', va='center', fontweight='bold')
+    kwargs = dict(size=10, color='white', va='center', fontweight='bold')
     ax6.text(0, 0, carb_sum, ha='center',
                 bbox=dict(boxstyle='round', edgecolor='none'),
                 **kwargs)
