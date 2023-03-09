@@ -157,8 +157,7 @@ with col1:
 
     # Adding Title of chart
     # plt.title('ภาพรวมของระดับน้ำตาล')
-    st.write('ภาพรวมของระดับน้ำตาล')
-    plt.title(u'ภาพรวมของระดับน้ำตาล',fontname='Tahoma',fontsize=9)
+    # plt.title(u'ภาพรวมของระดับน้ำตาล',fontname='Tahoma',fontsize=9)
     # Glucose overview
     # Add Legends
     # plt.legend(labels, loc='upper center', bbox_to_anchor=(0.5, -0.05))
@@ -237,8 +236,7 @@ with col1:
 
     # Adding Title of chart
     #plt.title('เฉลี่ยการฉีดอินซูลินต่อวัน')
-    st.write('เฉลี่ยการฉีดอินซูลินต่อวัน')
-    plt.title(u'เฉลี่ยการฉีดอินซูลินต่อวัน',fontname='Tahoma',fontsize=9)
+    # plt.title(u'เฉลี่ยการฉีดอินซูลินต่อวัน',fontname='Tahoma',fontsize=9)
     # Daily insulin average
     kwargs = dict(size=7, color='white', va='center', fontweight='bold')
     plt.text(0, 0, sum_dose_str, ha='center',
@@ -329,8 +327,7 @@ with col1:
     # b = a.encode("cp874")
     # c = b.decode("cp874")
     # st.write("เฉลี่ยการทานอาหารต่อวัน")
-    st.write('เฉลี่ยการทานอาหารต่อวัน')
-    plt.title(u'เฉลี่ยการทานอาหารต่อวัน',fontname='Tahoma',fontsize=9)
+    # plt.title(u'เฉลี่ยการทานอาหารต่อวัน',fontname='Tahoma',fontsize=9)
     # plt.title(a)
     # Daily meal average
 
