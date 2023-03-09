@@ -148,10 +148,10 @@ with col1:
 
     # draw circle
     centre_circle = plt.Circle((0, 0), 0.50, fc='white')
-    fig = ax4.plt.gcf()
+    fig4 = plt.gcf()
 
     # Adding Circle in Pie chart
-    fig.gca().add_artist(centre_circle)
+    fig4.gca().add_artist(centre_circle)
 
     # Adding Title of chart
     # plt.title('ภาพรวมของระดับน้ำตาล')
