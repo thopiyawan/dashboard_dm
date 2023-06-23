@@ -6,5 +6,4 @@ streamlit==1.19.0
 streamlit-elements==0.1.0
 matplotlib
 lxml
-pandas
 
