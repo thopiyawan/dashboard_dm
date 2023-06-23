@@ -26,7 +26,13 @@ import streamlit as st
 from PIL import Image
 # df = pd.read_xml('570-ws-training.xml')
 
-from pandas.core.construction import is_empty_data
+from pandas.core.construction import (
+    array as pd_array,
+    ensure_wrapped_if_datetimelike,
+    extract_array,
+    range_to_ndarray,
+    sanitize_array,
+)
 import xml.etree.ElementTree as ET
 tree = ET.parse('570-ws-training.xml')
 root = tree.getroot()
