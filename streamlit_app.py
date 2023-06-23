@@ -27,10 +27,9 @@ from PIL import Image
 # df = pd.read_xml('570-ws-training.xml')
 
 from pandas.core.construction import (
-    array as pd_array,
-    ensure_wrapped_if_datetimelike,
+    create_series_with_explicit_dtype,
     extract_array,
-    range_to_ndarray,
+    is_empty_data,
     sanitize_array,
 )
 import xml.etree.ElementTree as ET
